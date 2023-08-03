@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <title>SutdentsPortal</title>
+</head>
+<body class="bg-black ">
+    <div class="">
+        <h2 class="text-center bg-dark p-2 sticky-top  container-fluid display-3  w3-text-white"><a href="index.html" class="text-decoration-none ">StudentInformations <i class="fas fa-folder-open "> </i></a></h2>
+        <div class="row d-flex justify-content-center container">
+            <img src="assets/classroom.svg" alt="Image" class="img-fluid" style="width: 50%;">
+        </div>
+        <div class="row g-lg-2 container-fluid">
+        <div class="col-7 card bg-light">
+            <div class="card-header">Students <i class="fas fa-people-group"></i></div>
+            <div class="card-body">
+                <span id="stdResult"><div class="text-center" id="loading">
+                    <span class="text-secondary text-center">Currently,There is no students' informations here</span> <br>
+                    <!-- <span class="spinner-border w3-text-blue"></span> -->
+                </div></span>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex">
+                <button class="text-center  m-auto btn btn-outline-info" onclick="addStudent()">AddStudent <i class="fas fa-person-circle-plus"></i></button><br>
+                <button class="text-center  m-auto btn btn-outline-success" id="displayBtn" onclick="showStudents()">ShowStudents <i class="fas fa-person-circle-question"></i></button><br>
+                <button class="text-center  m-auto btn btn-outline-danger" id="deleteBtn" >DeleteStudent <i class="fas fa-person-circle-minus"></i></button><br>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header d-flex flex-wrap justify-content-center">
+                    <div class="input-group rounded-3  ">
+                        <input class="rounded-start-3 w-75" id="searchItem" placeholder="Enter Roll Number to Search" type="text">
+                        <button type="button" onclick="search()" id="sBtn" class="btn btn-dark fas fa-search rounded-end-3 input-group-text"></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span id="searchedStdPanel"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="bootstrap.bundle.js"></script>
+<script src="fontawesome-free-6.4.0-web/js/all.js"></script>
+</html>
